@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LowProfile</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    section {
+      padding: 40px;
+    }
+
+    .produto {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .produto-item {
+      flex: 0 0 33.33%;
+      padding: 20px;
+    }
+
+    .produto-imagem {
+      text-align: center;
+    }
+
+    .produto-imagem img {
+      width: 200px;
+      height: auto;
+    }
+
+    .produto-nome {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .produto-descricao {
+      color: #666;
+      margin-top: 5px;
+    }
+
+    .carrossel {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 200px;
+    }
+
+    .carrossel img {
+      display: none;
+      width: 100%;
+      height: auto;
+    }
+
+    .carrossel img:first-child {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Low Profile</h1>
+  </header>
+
+  <section>
+    <div class="produto">
+      <div class="produto-item">
+        <div class="produto-imagem">
+          <img src="C:\Users\bruno\Desktop\trab_isa\images\ssd1.png" alt="Placa de Vídeo 1">
+        </div>
+        <div class="produto-nome">Placa de Vídeo 1</div>
+        <div class="produto-descricao">Descrição da Placa de Vídeo 1</div>
+      </div>
+      <div class="produto-item">
+        <div class="produto-imagem">
+          <img src="C:\Users\bruno\Desktop\trab_isa\images\ssd2.png" alt="Placa de Vídeo 2">
+        </div>
+        <div class="produto-nome">Placa de Vídeo 2</div>
+        <div class="produto-descricao">Descrição da Placa de Vídeo 2</div>
+      </div>
+      <div class="produto-item">
+        <div class="produto-imagem">
+          <img src="C:\Users\bruno\Desktop\trab_isa\images\ssd3.png" alt="Placa de Vídeo 3">
+        </div>
+        <div class="produto-nome">Placa de Vídeo 3</div>
+        <div class="produto-descricao">Descrição da Placa de Vídeo 3</div>
+      </div>
+      <!-- Adicione mais produtos aqui conforme necessário -->
+    </div>
+  </section>
+
+  <div class="carrossel">
+    <img src="C:\Users\bruno\Desktop\trab_isa\images\nar.png" alt="Imagem 1">
+    <img src="C:\Users\bruno\Desktop\trab_isa\images\pri.png" alt="Imagem 2">
+    <img src="C:\Users\bruno\Desktop\trab_isa\images\sta.png" alt="Imagem 3">
+    <!-- Adicione mais imagens para o carrossel aqui conforme necessário -->
+  </div>
+  
+  <script>
+    let currentImage = 0;
+    const images = document.querySelectorAll('.carrossel img');
+    
+    setInterval(() => {
+      images[currentImage].style.display = 'none';
+      currentImage = (currentImage + 1) % images.length;
+      images[currentImage].style.display = 'block';
+    }, 3000);
+  </script>
+</body>
+</html>
