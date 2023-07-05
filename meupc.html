@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>MONTE SEU PC AGORA</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-size: cover;
+            color: green;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: flex;
+            align-items: flex;
+            height: 100vh;
+            flex-direction: column;
+            padding: 300px;
+        }
+        
+        h1 {
+            margin-bottom: 100px;
+        }
+        
+        .form {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        
+        .form input[type="text"] {
+            width: 200px;
+            padding: 5px;
+            border: 1px none  green;
+            border-radius: 4px;
+            color: green;
+        }
+        
+        .form button {
+            padding: 8px 12px;
+            background-color: black;
+            color: green;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        
+        .form button:hover {
+            background-color: #45a049;
+        }
+        
+        .computer {
+            width: 200px;
+            height: 100px;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body background="bg1.png">
+  
+    <div class="container">
+        <h1>MONTE SEU PC AGORA</h1>
+        
+        <div class="form">
+            <input type="text" placeholder="Placa-Mãe" style="color: green;">
+            <button onclick="myFunction()">Enviar</button>
+        </div>
+        
+        <div class="form">
+            <input type="text" placeholder="Placa de video" style="color: green;">
+            <button onclick="myFunction()">Enviar</button>
+        </div>
+        
+        <div class="form">
+            <input type="text" placeholder="Memória RAM" style="color: green;">
+            <button onclick="myFunction()">Enviar</button>
+        </div>
+        
+        <div class="form">
+            <input type="text" placeholder="Armazenamento" style="color: green;">
+            <button onclick="myFunction()">Enviar</button>
+        </div>
+    </div>
+    
+    <script>
+        function myFunction() {
+            alert("Botão clicado!");
+        }
+    </script>
+</body>
+</html>
